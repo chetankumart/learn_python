@@ -124,3 +124,13 @@ ints = [4, 0, 1, 2, 3]
 print(apply_to_list(ints, lambda x: x * 2))
 
 
+def add_numbers(x, y):
+    return x + y
+
+
+add_five = lambda y: add_numbers(5, y)
+print(add_five)
+from functools import partial
+
+add_five = partial(add_numbers, 5)
+print(add_five)
